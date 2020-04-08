@@ -9,9 +9,9 @@ const covid19ImpactEstimator = (data) => {
   severeImpact.infectionsByRequestedTime = severeImpact.currentlyInfected * 1024;
 
   return {
-    data, // the input data you got
-    impact, // your best case estimation
-    severeImpact // your severe case estimation
+    data,
+    impact,
+    severeImpact
   };
 };
 
