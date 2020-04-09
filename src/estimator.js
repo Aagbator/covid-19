@@ -18,7 +18,7 @@ const hospitalBedsByRequestedTime = (data, severeCases) => {
 
 const dollarsInFlight = (data, infectionsByRequestedTime, timeInDays) => {
   const RequestedTimeByRegion = infectionsByRequestedTime * data.region.avgDailyIncomePopulation;
-  return RequestedTimeByRegion * data.region.avgDailyIncomeInUSD * timeInDays;
+  return Math.trunc(RequestedTimeByRegion * data.region.avgDailyIncomeInUSD * timeInDays);
 };
 
 const calculateImpact = (data) => {
