@@ -16,10 +16,7 @@ const calculateImpact = (data) => {
   const currentlyInfected = data.reportedCases * 10;
   const infectionsByRequestedTime = currentlyInfected * (2 ** (Math.floor(timeInDays / 3)));
   const severeCasesByRequestedTime = Math.round(0.15 * infectionsByRequestedTime);
-  const hospitalBedsByRequestedTime = () => {
-    const availableBeds = data.totalHospitalBeds * 0.35;
-    return availableBeds - severeCasesByRequestedTime;
-  };
+  const hospitalBedsByRequestedTime = data.totalHospitalBeds - severeCasesByRequestedTime;
 
   return {
     currentlyInfected,
@@ -34,11 +31,8 @@ const calculateSevereImpact = (data) => {
   const currentlyInfected = data.reportedCases * 50;
   const infectionsByRequestedTime = currentlyInfected * (2 ** Math.floor(timeInDays / 3));
   const severeCasesByRequestedTime = Math.round(0.15 * infectionsByRequestedTime);
+  const hospitalBedsByRequestedTime = data.totalHospitalBeds - severeCasesByRequestedTime;
 
-  const hospitalBedsByRequestedTime = () => {
-    const availableBeds = data.totalHospitalBeds * 0.35;
-    return availableBeds - severeCasesByRequestedTime;
-  };
 
   return {
     currentlyInfected,
