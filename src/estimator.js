@@ -12,8 +12,6 @@ const convertToDays = (periodType, timeToElapse) => {
 };
 
 const casesForICUByRequestedTime = (time) => time * 0.05;
-const casesForVentilatorsByRequestedTime = (time) => time * 0.02;
-
 
 const severeCasesByRequestedTime = (time) => Math.round(time * 0.15);
 
