@@ -12,7 +12,7 @@ const convertToDays = (periodType, timeToElapse) => {
 };
 
 const casesForICUByRequestedTime = (time) => time * 0.05;
-const ventilatorsByRequestedTime = (time) => time * 0.02;
+const casesForVentilatorsByRequestedTime = (time) => time * 0.02;
 
 
 const severeCasesByRequestedTime = (time) => Math.round(time * 0.15);
@@ -36,9 +36,9 @@ const calculateImpact = (data) => {
     currentlyInfected,
     infectionsByRequestedTime,
     severeCasesByRequestedTime: severeCasesByRequestedTime(infectionsByRequestedTime),
-    hospitalBedsByRequestedTime: hospitalBedsByRequestedTime(data, calculateImpact.severeCasesByRequestedTime),
+    hospitalBedsByRequestedTime: hospitalBedsByRequestedTime(data, this.severeCasesByRequestedTime),
     casesForICUByRequestedTime: casesForICUByRequestedTime(infectionsByRequestedTime),
-    casesForVentilatorsByRequestedTime: ventilatorsByRequestedTime(infectionsByRequestedTime),
+    casesForVentilatorsByRequestedTime: infectionsByRequestedTime * 0.02,
     dollarsInFlight: dollarsInFlight(data, infectionsByRequestedTime, timeInDays)
   };
 };
@@ -52,9 +52,9 @@ const calculateSevereImpact = (data) => {
     currentlyInfected,
     infectionsByRequestedTime,
     severeCasesByRequestedTime: severeCasesByRequestedTime(infectionsByRequestedTime),
-    hospitalBedsByRequestedTime: hospitalBedsByRequestedTime(data, calculateSevereImpact.severeCasesByRequestedTime),
+    hospitalBedsByRequestedTime: hospitalBedsByRequestedTime(data, this.severeCasesByRequestedTime),
     casesForICUByRequestedTime: casesForICUByRequestedTime(infectionsByRequestedTime),
-    casesForVentilatorsByRequestedTime: ventilatorsByRequestedTime(infectionsByRequestedTime),
+    casesForVentilatorsByRequestedTime: infectionsByRequestedTime * 0.02,
     dollarsInFlight: dollarsInFlight(data, infectionsByRequestedTime, timeInDays)
   };
 };
