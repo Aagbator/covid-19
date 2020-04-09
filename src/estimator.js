@@ -1,12 +1,43 @@
-const calculateImpact = (data) => ({
-  currentlyInfected: data.reportedCases * 10,
-  infectionsByRequestedTime: this.currentlyInfected * (2 ** Math.floor(data.timeToElapse / 3))
-});
 
-const calculateSevereImpact = (data) => ({
-  currentlyInfected: data.reportedCases * 50,
-  infectionsByRequestedTime: this.currentlyInfected * (2 ** Math.floor(data.timeToElapse / 3))
-});
+const convertToDays = (periodType, timeToElapse) => {
+  let days = null;
+  switch (periodType) {
+    case 'days':
+      days = timeToElapse;
+      break;
+    case 'weeks':
+      days = timeToElapse * 7;
+      break;
+    case 'months':
+      days = timeToElapse * 30;
+      break;
+    default:
+      days = timeToElapse;
+  }
+  return days;
+};
+
+const calculateImpact = (data) => {
+  const timeInDays = convertToDays(data.periodType, data.timeToElapse);
+  const currentlyInfected = data.reportedCases * 10;
+  const infectionsByRequestedTime = currentlyInfected * (2 ** Math.floor(timeInDays / 3));
+
+  return {
+    currentlyInfected,
+    infectionsByRequestedTime
+  };
+};
+
+const calculateSevereImpact = (data) => {
+  const timeInDays = convertToDays(data.periodType, data.timeToElapse);
+  const currentlyInfected = data.reportedCases * 50;
+  const infectionsByRequestedTime = currentlyInfected * (2 ** Math.floor(timeInDays / 3));
+
+  return {
+    currentlyInfected,
+    infectionsByRequestedTime
+  };
+};
 
 const covid19ImpactEstimator = (data) => ({
   data,
@@ -15,3 +46,18 @@ const covid19ImpactEstimator = (data) => ({
 });
 
 export default covid19ImpactEstimator;
+
+
+// {
+//   region: {
+//     name: "Africa",
+//       avgAge: 19.7,
+//       avgDailyIncomeInUSD: 5,
+//       avgDailyIncomePopulation: 0.71
+//   },
+//   periodType: "days",
+//     timeToElapse: 58,
+//   reportedCases: 674,
+//   population: 66622705,
+//   totalHospitalBeds: 1380614
+// }
