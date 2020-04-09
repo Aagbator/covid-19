@@ -11,10 +11,6 @@ const convertToDays = (periodType, timeToElapse) => {
   return days;
 };
 
-const casesForICUByRequestedTime = (time) => time * 0.05;
-
-const severeCasesByRequestedTime = (time) => Math.round(time * 0.15);
-
 const hospitalBedsByRequestedTime = (data, severeCases) => {
   const availableBeds = data.totalHospitalBeds * 0.35;
   return Math.trunc(availableBeds - severeCases);
@@ -29,14 +25,17 @@ const calculateImpact = (data) => {
   const timeInDays = convertToDays(data.periodType, data.timeToElapse);
   const currentlyInfected = data.reportedCases * 10;
   const infectionsByRequestedTime = currentlyInfected * (2 ** (Math.floor(timeInDays / 3)));
+  const severeCasesByRequestedTime = Math.round(0.15 * infectionsByRequestedTime);
+  const casesForICUByRequestedTime = Math.trunc(0.05 * infectionsByRequestedTime);
+  const casesForVentilatorsByRequestedTime = 0.02 * infectionsByRequestedTime;
 
   return {
     currentlyInfected,
     infectionsByRequestedTime,
-    severeCasesByRequestedTime: severeCasesByRequestedTime(infectionsByRequestedTime),
-    hospitalBedsByRequestedTime: hospitalBedsByRequestedTime(data, this.severeCasesByRequestedTime),
-    casesForICUByRequestedTime: casesForICUByRequestedTime(infectionsByRequestedTime),
-    casesForVentilatorsByRequestedTime: infectionsByRequestedTime * 0.02,
+    severeCasesByRequestedTime,
+    hospitalBedsByRequestedTime: hospitalBedsByRequestedTime(data, severeCasesByRequestedTime),
+    casesForICUByRequestedTime: Math.trunc(casesForICUByRequestedTime),
+    casesForVentilatorsByRequestedTime,
     dollarsInFlight: dollarsInFlight(data, infectionsByRequestedTime, timeInDays)
   };
 };
@@ -45,14 +44,17 @@ const calculateSevereImpact = (data) => {
   const timeInDays = convertToDays(data.periodType, data.timeToElapse);
   const currentlyInfected = data.reportedCases * 50;
   const infectionsByRequestedTime = currentlyInfected * (2 ** Math.floor(timeInDays / 3));
+  const severeCasesByRequestedTime = Math.trunc(0.15 * infectionsByRequestedTime);
+  const casesForICUByRequestedTime = Math.trunc(0.05 * infectionsByRequestedTime);
+  const casesForVentilatorsByRequestedTime = 0.02 * infectionsByRequestedTime;
 
   return {
     currentlyInfected,
     infectionsByRequestedTime,
-    severeCasesByRequestedTime: severeCasesByRequestedTime(infectionsByRequestedTime),
-    hospitalBedsByRequestedTime: hospitalBedsByRequestedTime(data, this.severeCasesByRequestedTime),
-    casesForICUByRequestedTime: casesForICUByRequestedTime(infectionsByRequestedTime),
-    casesForVentilatorsByRequestedTime: infectionsByRequestedTime * 0.02,
+    severeCasesByRequestedTime,
+    hospitalBedsByRequestedTime: hospitalBedsByRequestedTime(data, severeCasesByRequestedTime),
+    casesForICUByRequestedTime: Math.trunc(casesForICUByRequestedTime),
+    casesForVentilatorsByRequestedTime,
     dollarsInFlight: dollarsInFlight(data, infectionsByRequestedTime, timeInDays)
   };
 };
