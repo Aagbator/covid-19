@@ -1,12 +1,16 @@
 
 const convertToDays = (periodType, timeToElapse) => {
-  let days = 0;
-  if (periodType === 'days') {
-    days = timeToElapse;
-  } else if (periodType === 'weeks') {
-    days = timeToElapse * 7;
-  } else if (periodType === 'months') {
-    days = timeToElapse * 30;
+  let days = null;
+  switch (periodType) {
+    case 'weeks':
+      days = timeToElapse * 7;
+      break;
+    case 'months':
+      days = timeToElapse * 30;
+      break;
+    default:
+      days = timeToElapse;
+      break;
   }
   return days;
 };
@@ -14,7 +18,7 @@ const convertToDays = (periodType, timeToElapse) => {
 const calculateImpact = (data) => {
   const timeInDays = convertToDays(data.periodType, data.timeToElapse);
   const currentlyInfected = data.reportedCases * 10;
-  const infectionsByRequestedTime = currentlyInfected * (2 ** Math.round(timeInDays / 3));
+  const infectionsByRequestedTime = currentlyInfected * (2 ** (Math.round(timeInDays / 3)));
 
   return {
     currentlyInfected,
