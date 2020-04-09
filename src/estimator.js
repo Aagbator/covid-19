@@ -16,17 +16,27 @@ const hospitalBedsByRequestedTime = (data, severeCases) => {
   return Math.trunc(availableBeds - severeCases);
 };
 
+const dollarsInFlight = (infectionsByRequestedTime, timeInDays) =>{
+  const infectionsByRequestedTimeByRegion = infectionsByRequestedTime * data.region.avgDailyIncomePopulation;
+  return infectionsByRequestedTimeByRegion * data.region.avgDailyIncomeInUSD * timeInDays;
+}
+
 const calculateImpact = (data) => {
   const timeInDays = convertToDays(data.periodType, data.timeToElapse);
   const currentlyInfected = data.reportedCases * 10;
   const infectionsByRequestedTime = currentlyInfected * (2 ** (Math.floor(timeInDays / 3)));
   const severeCasesByRequestedTime = Math.round(0.15 * infectionsByRequestedTime);
+  const casesForICUByRequestedTime = 0.05 * infectionsByRequestedTime;
+  const casesForVentilatorsByRequestedTime = 0.02 * infectionsByRequestedTime;
 
   return {
     currentlyInfected,
     infectionsByRequestedTime,
     severeCasesByRequestedTime,
-    hospitalBedsByRequestedTime: hospitalBedsByRequestedTime(data, severeCasesByRequestedTime)
+    hospitalBedsByRequestedTime: hospitalBedsByRequestedTime(data, severeCasesByRequestedTime),
+    casesForICUByRequestedTime,
+    casesForVentilatorsByRequestedTime,
+    dollarsInFlight: dollarsInFlight(infectionsByRequestedTime, timeInDays)
   };
 };
 
@@ -35,13 +45,17 @@ const calculateSevereImpact = (data) => {
   const currentlyInfected = data.reportedCases * 50;
   const infectionsByRequestedTime = currentlyInfected * (2 ** Math.floor(timeInDays / 3));
   const severeCasesByRequestedTime = Math.round(0.15 * infectionsByRequestedTime);
-
+  const casesForICUByRequestedTime = 0.05 * infectionsByRequestedTime;
+  const casesForVentilatorsByRequestedTime = 0.02 * infectionsByRequestedTime;
 
   return {
     currentlyInfected,
     infectionsByRequestedTime,
     severeCasesByRequestedTime,
-    hospitalBedsByRequestedTime: hospitalBedsByRequestedTime(data, severeCasesByRequestedTime)
+    hospitalBedsByRequestedTime: hospitalBedsByRequestedTime(data, severeCasesByRequestedTime),
+    casesForICUByRequestedTime,
+    casesForVentilatorsByRequestedTime,
+    dollarsInFlight: dollarsInFlight(infectionsByRequestedTime, timeInDays)
   };
 };
 
