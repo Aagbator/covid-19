@@ -1,16 +1,12 @@
 
 const convertToDays = (periodType, timeToElapse) => {
-  let days = null;
-  switch (periodType) {
-    case 'weeks':
-      days = timeToElapse * 7;
-      break;
-    case 'months':
-      days = timeToElapse * 30;
-      break;
-    default:
-      days = timeToElapse;
-      break;
+  let days;
+  if (periodType === 'weeks') {
+    days = timeToElapse * 7;
+  } else if (periodType === 'months') {
+    days = timeToElapse * 30;
+  } else {
+    days = timeToElapse;
   }
   return days;
 };
