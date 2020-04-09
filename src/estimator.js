@@ -12,9 +12,7 @@ const convertToDays = (periodType, timeToElapse) => {
 };
 
 const calculateImpact = (data) => {
-  const { periodType, timeToElapse } = data;
-
-  const timeInDays = convertToDays(periodType, timeToElapse);
+  const timeInDays = convertToDays(data.periodType, data.timeToElapse);
   const currentlyInfected = data.reportedCases * 10;
   const infectionsByRequestedTime = currentlyInfected * (2 ** (Math.floor(timeInDays / 3)));
 
