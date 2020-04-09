@@ -16,7 +16,7 @@ const hospitalBedsByRequestedTime = (data, severeCases) => {
   return Math.trunc(availableBeds - severeCases);
 };
 
-const dollarsInFlight = (infectionsByRequestedTime, timeInDays) =>{
+const dollarsInFlight = (data, infectionsByRequestedTime, timeInDays) =>{
   const infectionsByRequestedTimeByRegion = infectionsByRequestedTime * data.region.avgDailyIncomePopulation;
   return infectionsByRequestedTimeByRegion * data.region.avgDailyIncomeInUSD * timeInDays;
 }
@@ -36,7 +36,7 @@ const calculateImpact = (data) => {
     hospitalBedsByRequestedTime: hospitalBedsByRequestedTime(data, severeCasesByRequestedTime),
     casesForICUByRequestedTime,
     casesForVentilatorsByRequestedTime,
-    dollarsInFlight: dollarsInFlight(infectionsByRequestedTime, timeInDays)
+    dollarsInFlight: dollarsInFlight(data, infectionsByRequestedTime, timeInDays)
   };
 };
 
@@ -55,7 +55,7 @@ const calculateSevereImpact = (data) => {
     hospitalBedsByRequestedTime: hospitalBedsByRequestedTime(data, severeCasesByRequestedTime),
     casesForICUByRequestedTime,
     casesForVentilatorsByRequestedTime,
-    dollarsInFlight: dollarsInFlight(infectionsByRequestedTime, timeInDays)
+    dollarsInFlight: dollarsInFlight(data, infectionsByRequestedTime, timeInDays)
   };
 };
 
