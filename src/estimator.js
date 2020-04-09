@@ -1,11 +1,11 @@
 const calculateImpact = (data) => ({
   currentlyInfected: data.reportedCases * 10,
-  infectionsByRequestedTime: data.currentlyInfected * 1024
+  infectionsByRequestedTime: this.currentlyInfected * (2 ** Math.floor(data.timeToElapse / 3))
 });
 
 const calculateSevereImpact = (data) => ({
   currentlyInfected: data.reportedCases * 50,
-  infectionsByRequestedTime: data.currentlyInfected * 1024
+  infectionsByRequestedTime: this.currentlyInfected * (2 ** Math.floor(data.timeToElapse / 3))
 });
 
 const covid19ImpactEstimator = (data) => ({
