@@ -19,7 +19,7 @@ const hospitalBedsByRequestedTime = (data, severeCases) => {
 const dollarsInFlight = (data, infectionsByRequestedTime, timeInDays) => {
   const RequestedTimeByRegion = infectionsByRequestedTime * data.region.avgDailyIncomePopulation;
   return RequestedTimeByRegion * data.region.avgDailyIncomeInUSD * timeInDays;
-}
+};
 
 const calculateImpact = (data) => {
   const timeInDays = convertToDays(data.periodType, data.timeToElapse);
