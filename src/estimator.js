@@ -27,7 +27,7 @@ const calculateImpact = (data) => {
   const infectionsByRequestedTime = currentlyInfected * (2 ** (Math.floor(timeInDays / 3)));
   const severeCasesByRequestedTime = Math.round(0.15 * infectionsByRequestedTime);
   const casesForICUByRequestedTime = Math.trunc(0.05 * infectionsByRequestedTime);
-  const casesForVentilatorsByRequestedTime = 0.02 * infectionsByRequestedTime;
+  const casesForVentilatorsByRequestedTime = Math.trunc(0.02 * infectionsByRequestedTime);
 
   return {
     currentlyInfected,
@@ -46,7 +46,7 @@ const calculateSevereImpact = (data) => {
   const infectionsByRequestedTime = currentlyInfected * (2 ** Math.floor(timeInDays / 3));
   const severeCasesByRequestedTime = Math.trunc(0.15 * infectionsByRequestedTime);
   const casesForICUByRequestedTime = Math.trunc(0.05 * infectionsByRequestedTime);
-  const casesForVentilatorsByRequestedTime = 0.02 * infectionsByRequestedTime;
+  const casesForVentilatorsByRequestedTime = Math.trunc(0.02 * infectionsByRequestedTime);
 
   return {
     currentlyInfected,
