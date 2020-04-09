@@ -13,7 +13,7 @@ const convertToDays = (periodType, timeToElapse) => {
 
 const hospitalBedsByRequestedTime = (data, severeCases) => {
   const availableBeds = data.totalHospitalBeds * 0.35;
-  return Math.round(availableBeds - severeCases);
+  return Math.trunc(availableBeds - severeCases);
 };
 
 const calculateImpact = (data) => {
