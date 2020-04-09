@@ -34,7 +34,7 @@ const calculateImpact = (data) => {
     infectionsByRequestedTime,
     severeCasesByRequestedTime,
     hospitalBedsByRequestedTime: hospitalBedsByRequestedTime(data, severeCasesByRequestedTime),
-    casesForICUByRequestedTime,
+    casesForICUByRequestedTime: Math.trunc(casesForICUByRequestedTime),
     casesForVentilatorsByRequestedTime,
     dollarsInFlight: dollarsInFlight(data, infectionsByRequestedTime, timeInDays)
   };
@@ -53,7 +53,7 @@ const calculateSevereImpact = (data) => {
     infectionsByRequestedTime,
     severeCasesByRequestedTime,
     hospitalBedsByRequestedTime: hospitalBedsByRequestedTime(data, severeCasesByRequestedTime),
-    casesForICUByRequestedTime,
+    casesForICUByRequestedTime: Math.trunc(casesForICUByRequestedTime),
     casesForVentilatorsByRequestedTime,
     dollarsInFlight: dollarsInFlight(data, infectionsByRequestedTime, timeInDays)
   };
