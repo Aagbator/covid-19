@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="827314b5-ae3c-426c-adf4-dbcb29479411" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/actions/jest-out/action.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/actions/jest-out/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/actions/lhr-out/action.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/actions/lhr-out/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/actions/props-out/action.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/actions/props-out/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/gradr.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/gradr.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -52,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.github/workflows/gradr.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="280" column="17" selection-start-line="280" selection-start-column="17" selection-end-line="280" selection-end-column="17" />
+            <state relative-caret-position="216">
+              <caret line="241" column="39" selection-start-line="241" selection-start-column="39" selection-end-line="241" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -191,18 +184,18 @@
       <updated>1586337210464</updated>
       <workItem from="1586337211770" duration="1691000" />
       <workItem from="1586385549551" duration="19374000" />
-      <workItem from="1586623059206" duration="9450000" />
+      <workItem from="1586623059206" duration="9586000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30515000" />
+    <option name="totallyTimeSpent" value="30651000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33685693" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33685693" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -217,7 +210,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3292517" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2313253" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2313253" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -385,8 +378,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.github/workflows/gradr.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="280" column="17" selection-start-line="280" selection-start-column="17" selection-end-line="280" selection-end-column="17" />
+        <state relative-caret-position="216">
+          <caret line="241" column="39" selection-start-line="241" selection-start-column="39" selection-end-line="241" selection-end-column="39" />
         </state>
       </provider>
     </entry>
