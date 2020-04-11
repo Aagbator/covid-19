@@ -2,49 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="827314b5-ae3c-426c-adf4-dbcb29479411" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/images/image-dir.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/bootstrap/js/npm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/font-awesome/css/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/font-awesome/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/jquery/jquery-1.11.2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/jquery/jquery-1.11.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/meanMenu/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/meanMenu/jquery.meanmenu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/meanMenu/jquery.meanmenu.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/meanMenu/meanmenu.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/plugins/meanMenu/meanmenu.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/styles/abstracts/_functions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/styles/abstracts/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/styles/abstracts/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/styles/base/_base.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/styles/base/_fonts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/styles/base/_helpers.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/styles/base/_typography.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/styles/components/_button.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/styles/layout/_footer.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/styles/layout/_header.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/styles/pages/_home.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ui/assets/styles/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/assets/styles/themes/_default.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ui/assets/styles/themes/_default.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/ui/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -66,56 +25,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="974">
-              <caret line="65" column="51" selection-start-line="65" selection-start-column="51" selection-end-line="65" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/assets/styles/style.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-127">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/assets/styles/themes/_default.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="42" selection-start-column="42" selection-end-column="42" />
+            <state relative-caret-position="15">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="94" column="13" lean-forward="true" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
+              <caret line="94" column="13" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -134,6 +57,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Love Angular</find>
+      <find>env</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -152,8 +76,8 @@
         <option value="$PROJECT_DIR$/ui/assets/styles/style.scss" />
         <option value="$PROJECT_DIR$/ui/index.html" />
         <option value="$PROJECT_DIR$/ui/assets/styles/themes/_default.scss" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/.env" />
       </list>
     </option>
   </component>
@@ -175,11 +99,6 @@
             <path>
               <item name="covid-19" type="b2602c69:ProjectViewProjectNode" />
               <item name="covid-19" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="covid-19" type="b2602c69:ProjectViewProjectNode" />
-              <item name="covid-19" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -235,12 +154,12 @@
       <updated>1586337210464</updated>
       <workItem from="1586337211770" duration="1691000" />
       <workItem from="1586385549551" duration="19374000" />
-      <workItem from="1586623059206" duration="6735000" />
+      <workItem from="1586623059206" duration="7360000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27800000" />
+    <option name="totallyTimeSpent" value="28425000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -409,17 +328,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="42" selection-start-column="42" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="94" column="13" lean-forward="true" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
+          <caret line="94" column="13" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
